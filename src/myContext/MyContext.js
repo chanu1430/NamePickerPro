@@ -16,6 +16,7 @@ function MyContext({children}) {
                     return index!==action.index
                 })
                 return newArr;
+           
             default :
                 return state;
         }
