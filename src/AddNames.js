@@ -9,8 +9,10 @@ function AddNames(props) {
     const dispatchNames=useContext(dispatchContext);
     const handleAddNameButton=(e)=>{
         e.preventDefault();
-        const nameCheck=(nameChange.length)?
-        dispatchNames({type:"AddName",data:nameChange}):null
+        if(nameChange.length){
+            dispatchNames({type:"AddName",data:nameChange})
+        }
+        
 
         setNameChange("");
       

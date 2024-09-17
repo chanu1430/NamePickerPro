@@ -1,16 +1,16 @@
 import { useState,useEffect ,useContext} from 'react';
 import './App.css';
 import AddNames from './AddNames';
-import {dispatchContext, stateContext} from "./myContext/MyContext"
-import { hostStateContext,hostDispatchContext,hostNameStateContext,hostNameDispatchContext } from './myContext/HostContext';
+import { stateContext} from "./myContext/MyContext"
+import { hostDispatchContext,hostNameStateContext,hostNameDispatchContext } from './myContext/HostContext';
 import WhatTheHeck from './WhatTheHeck';
 
 function App() {
   // const names = ["John", "Jane", "Alice", "Bob", "Emma", "Michael"];
 
  const names=useContext(stateContext);
- const dispatch=useContext(dispatchContext);
- const hostStateValue=useContext(hostStateContext);
+//  const dispatch=useContext(dispatchContext);
+//  const hostStateValue=useContext(hostStateContext);
  const hostDispatch=useContext(hostDispatchContext);
  const hostSelectedNameDispatch=useContext(hostNameDispatchContext);
   const totalRounds = 3;
